@@ -18,9 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-<<<<<<< HEAD
+
     url(r'^polls/',include('votePlus.apps.polls.urls', namespace='polls')),
-=======
+
     url(r'^accounts/', include('django.contrib.auth.urls')),
->>>>>>> feature/accounts
+
 ]
