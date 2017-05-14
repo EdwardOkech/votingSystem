@@ -1,2 +1,7 @@
 /.idea/
+<<<<<<< HEAD
 *.pyc
+=======
+/.pyc/
+/.sqlite3/
+>>>>>>> polls

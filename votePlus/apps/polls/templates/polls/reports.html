@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load staticfiles %}
+<html>
+<head>
+<title> Polls reports </title>
+
+    <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+  <!--&lt;!&ndash; Numeric JS &ndash;&gt;-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>-->
+<script type="text/javascript" src="{% static 'polls/js/plotly-latest.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'polls/js/jquery-3.2.0.min.js' %}"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+</script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</head>
+
+<body>
+<a href="{% url 'polls:index' %}">Go back Home </a></br>
+
+{{ chart.as_html }}
+
+
+</body>
+</html>
