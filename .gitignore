@@ -1,11 +1,4 @@
-/.idea/
-<<<<<<< HEAD
-<<<<<<< HEAD
+.idea
 *.pyc
-=======
-/.pyc/
-/.sqlite3/
->>>>>>> polls
-=======
-*.pyc
->>>>>>> feature/accounts
+.sqlite3
+
