@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import json
 import datetime
 from django.utils import timezone
@@ -16,9 +18,17 @@ from votePlus.apps.polls.models import Question, Choice
 from graphos.sources.simple import SimpleDataSource
 from graphos.sources.model import ModelDataSource
 from graphos.renderers.gchart import LineChart, BaseChart
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import classonlymethod
 # from . import models
 
-class IndexView(generic.ListView):
+
+class LoginRequiredMixin(object):
+    @classonlymethod
+    def as_view(cls, **initkwargs):
+        return login_required(super(LoginRequiredMixin, cls).as_view(**initkwargs))
+
+class IndexView(LoginRequiredMixin,generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
