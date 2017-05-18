@@ -16,9 +16,11 @@ from votePlus.apps.polls.models import Question, Choice
 from graphos.sources.simple import SimpleDataSource
 from graphos.sources.model import ModelDataSource
 from graphos.renderers.gchart import LineChart, BaseChart
+from django.contrib.auth.decorators import login_required
 # from . import models
 
 class IndexView(generic.ListView):
+    login_required = True
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
