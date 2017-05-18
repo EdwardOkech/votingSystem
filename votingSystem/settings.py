@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'votePlus.apps.blog',
     'votePlus.apps.dashboard',
     'votePlus.apps.polls',
+    'votePlus.apps.home',
 )
 
 MIDDLEWARE_CLASSES = (
